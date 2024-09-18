@@ -1,0 +1,24 @@
+<button (click)="alternateVisibility()" class="dynamic-button">➡️ Menu</button>
+<section class="sidemenu-container"
+  [style.background-color]="theme"
+  [style.width]="widthMenu + '%'"
+  [style.display]="visibleMenu ? 'flex' : 'none'">
+    <div class="item">
+        <img src="https://cdn-icons-png.flaticon.com/512/290/290836.png" class="imgt">
+        <p>{{username}}</p>
+        <!-- interpolacion activa -->
+        <button (click)="alternateVisibility()" class="dynamic-button">✖️</button>
+       <!-- Ejecutamos event hinding -->
+    </div>
+    <div class="item">
+        <p><span>👌</span>Dashboard</p>
+    </div>
+    <div class="item">
+        <p><span>👍</span>Profile</p>
+    </div>
+    <div class="button-container">
+        <button class="dynamic-button" (click)="setTheme()">Change Colors</button>
+        <button class="dynamic-button" (click)="setSize()">Change Size</button>
+        <!-- Ejecutamos event hinding -->
+    </div>
+</section>
